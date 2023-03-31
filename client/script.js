@@ -65,7 +65,7 @@ const handleSubmit = async (e) => {
   const data = new FormData(form)
 
   // user's chatStripe
-  chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
+  chatContainer.innerHTML += chatStripe(false, data.get('prompt').trim())
 
   // bot's chatStripe
   const uniqueId = generateUniqueId()
